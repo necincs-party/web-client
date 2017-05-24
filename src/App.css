@@ -1,24 +1,126 @@
-.App {
+/*
+#9a8751
+#407a5b
+*/
+
+:root {
+  --color-main: #407a5b;
+  --color-secondary: #9a8751;
+  --regular-text: "Source Sans Pro", "Lato", Helvetica, Arial, sans-serif;
+  --header-text: "Lato", Helvetica, Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--regular-text);
+  color: #414141;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.dashboard__map {
+  flex: 7;
+}
+
+.dashboard__data {
+  flex: 5;
+  padding-top: 26vh;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.dashboard__data_wrapper {
+   padding: 0 50px;
+}
+
+.dashboard__data_register {
+  margin: auto;
+  max-width: 500px;
+
+}
+
+.signingForm {
+  max-width: 430px;
+  width: 100%;
+  margin: auto;
+}
+
+.signingForm__container {
+  width: 100vw;
+  height: 100vh;
+  padding: 3vh;
+  box-sizing: border-box;
+}
+
+.signingForm__title {
+  margin: 0 0 1em;
+  font-family: var(--header-text);
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.signingForm__control-group {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.signingForm__label {
+  display: block;
+  margin: 0 10px 8px;
 }
 
-.App-intro {
-  font-size: large;
+.signingForm__input {
+  width: 100%;
+  font-size: 17px;
+  padding: 13px;
+  border: 1px solid var(--color-secondary);
+  outline-color: var(--color-main);
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.signingForm__submit-btn {
+  font-size: 17px;
+  line-height: 45px;
+  height: 45px;
+  padding: 0 30px;
+  margin-top: 15px;
+  border: none;
+  border-radius: calc(45px / 2);
+  color: #ffffff;
+  background-image: linear-gradient(30deg, var(--color-main) 0%, var(--color-secondary) 100%);
+  transition: box-shadow .5s;
+  box-shadow: 0px 3px 10px transparent;
+}
+
+.signingForm__submit-btn:hover,
+.signingForm__submit-btn:focus {
+  outline: none;
+  box-shadow: 0px 3px 10px var(--color-secondary);
+}
+
+.signingForm__submit-btn:active {
+  box-shadow: inset 0 3px 10px rgba(0, 0, 0, .12);
+}
+
+.signingForm__link {
+  float: right;
+  color: var(--color-main);
+  cursor: pointer;
+}
+
+.signingForm__link:hover,
+.signingForm__link:focus {
+  color: var(--color-secondary);
+}
+
+.signingForm__link_change-form {
+  margin-top: 15px;
+  line-height: 45px;
 }
